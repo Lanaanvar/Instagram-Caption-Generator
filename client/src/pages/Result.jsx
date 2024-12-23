@@ -18,19 +18,31 @@ const Result = () => {
 
   return (
     <div className="result-container">
-      <h2>Your Results</h2>
-      <p><strong>Caption:</strong> {caption}</p>
+      <h2>Your Perfect Instagram Post</h2>
+      <div className="caption-section">
+        <h3>📸 Caption</h3>
+        <p>{caption}</p>
+      </div>
+      
       <div className="song-recommendation">
-        <h3>Song Recommendation:</h3>
+        <h3>🎵 Perfect Song Match</h3>
         <p><strong>Title:</strong> {song.name}</p>
         <p><strong>Artist:</strong> {song.artist}</p>
         {song.spotify_url && (
-          <a href={song.spotify_url} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={song.spotify_url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="spotify-link"
+          >
             Listen on Spotify
           </a>
         )}
       </div>
-      <button onClick={() => navigate("/")}>Upload Another Image</button>
+      
+      <button className="submit-button" onClick={() => navigate("/")}>
+        Create Another
+      </button>
     </div>
   );
 };
