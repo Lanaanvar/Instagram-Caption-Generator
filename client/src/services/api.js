@@ -26,3 +26,16 @@ export const generateCaptionAndSong = async (imageFile) => {
     throw error;
   }
 };
+
+export const getAnotherSong = async (caption, previousSongs = []) => {
+  try {
+    const songResponse = await axios.post(`${BASE_URL}/api/song`, {
+      caption: caption,
+      previousSongs: previousSongs
+    });
+    return songResponse.data;
+  } catch (error) {
+    console.error("Error getting new song:", error);
+    throw error;
+  }
+};

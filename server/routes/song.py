@@ -1,6 +1,7 @@
 # routes/song.py
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+from typing import List
 from services.spotify_api import get_song_recommendation
 
 router = APIRouter()
@@ -8,12 +9,13 @@ router = APIRouter()
 # Define request body model
 class CaptionRequest(BaseModel):
     caption: str
+    previousSongs: List[str] = []
 
 @router.post("/")
 async def recommend_song(request: CaptionRequest):
     try:
         # Get song recommendation based on caption
-        song = get_song_recommendation(request.caption)
+        song = get_song_recommendation(request.caption, request.previousSongs)
         
         # If there's an error in the song response
         if "error" in song:
