@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://instagram-caption-generator-6pk3.onrender.com/"; // Replace with your backend URL
+const BASE_URL = "https://instagram-caption-generator-6pk3.onrender.com"; // Replace with your backend URL
 
 export const generateCaptionAndSong = async (imageFile) => {
   const formData = new FormData();
