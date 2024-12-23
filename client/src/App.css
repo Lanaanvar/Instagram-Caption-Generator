@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.home-container {
+  padding: 2rem;
+}
+
+.upload-form {
+  margin-top: 1rem;
+}
+
+.upload-form input {
+  margin-bottom: 1rem;
+}
+
+.result-container {
+  padding: 2rem;
+}
