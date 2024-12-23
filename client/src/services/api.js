@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8000"; // Replace with your backend URL
+const BASE_URL = "https://instagram-caption-generator-pnvj.vercel.app/"; // Replace with your backend URL
 
 export const generateCaptionAndSong = async (imageFile) => {
   const formData = new FormData();
