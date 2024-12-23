@@ -18,5 +18,23 @@ This web application generates a suitable caption and song recommendations for a
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Lanaanvar/Instagram-Caption-Generator.git
+```
+### 2. Install required dependencies
+
+```bash
+pip install -r requirements.txt
+
+```
+### 3.  Set up the .env file
+
+```bash
+SPOTIFY_CLIENT_ID=<your-client-id>
+SPOTIFY_CLIENT_SECRET=<your-client-secret>
+```
+
+### 4. Start the FastAPI server
+
+```bash
+uvicorn backend.app:app --reload
 ```
